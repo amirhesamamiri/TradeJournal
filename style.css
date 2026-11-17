@@ -1,0 +1,274 @@
+
+/* تنظیمات عمومی */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Tahoma, Arial, sans-serif;
+    background: #f5f7fb;
+    color: #263247;
+    direction: rtl;
+    padding-bottom: 85px;
+}
+
+/* سربرگ */
+
+.header {
+    background: #ffffff;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #e8edf4;
+}
+
+.header h1 {
+    font-size: 21px;
+    color: #1e40af;
+}
+
+.header p {
+    font-size: 12px;
+    color: #7b8798;
+    margin-top: 7px;
+}
+
+.profile {
+    background: #2563eb;
+    color: white;
+    width: 43px;
+    height: 43px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+
+/* محتوای اصلی */
+
+.container {
+    max-width: 650px;
+    margin: auto;
+    padding: 18px;
+}
+
+.welcome {
+    margin: 12px 0 22px;
+}
+
+.welcome h2 {
+    font-size: 20px;
+    margin-bottom: 8px;
+}
+
+.welcome p {
+    color: #7b8798;
+    font-size: 13px;
+}
+
+/* کارت های آماری */
+
+.stats {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 13px;
+}
+
+.stat-card {
+    background: white;
+    padding: 19px;
+    border-radius: 14px;
+    border: 1px solid #edf0f5;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.03);
+}
+
+.stat-card span {
+    font-size: 12px;
+    color: #7b8798;
+}
+
+.stat-card h2 {
+    margin-top: 12px;
+    font-size: 23px;
+    color: #2563eb;
+}
+
+/* کارت سود و زیان */
+
+.balance-card {
+    margin-top: 17px;
+    padding: 23px;
+    background: #ffffff;
+    border-radius: 15px;
+    border: 1px solid #e8edf4;
+}
+
+.balance-card span {
+    color: #7b8798;
+    font-size: 13px;
+}
+
+.balance-card h2 {
+    margin: 13px 0;
+    font-size: 27px;
+    color: #16a34a;
+}
+
+.balance-card p {
+    color: #9aa4b2;
+    font-size: 12px;
+}
+
+/* بخش مدیریت */
+
+.actions {
+    margin-top: 25px;
+}
+
+.actions h3 {
+    margin-bottom: 15px;
+    font-size: 17px;
+}
+
+.actions button {
+    display: block;
+    width: 100%;
+    padding: 16px;
+    margin-bottom: 12px;
+    border: none;
+    border-radius: 11px;
+    background: #2563eb;
+    color: white;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.actions button:active {
+    background: #1d4ed8;
+}
+
+/* منوی پایین */
+
+.bottom-nav {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background: white;
+    border-top: 1px solid #e8edf4;
+    display: flex;
+    justify-content: space-around;
+    padding: 13px 5px;
+}
+
+.bottom-nav button {
+    background: none;
+    border: none;
+    color: #64748b;
+    font-family: inherit;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+/* نمایش در موبایل */
+
+@media (max-width: 480px) {
+    .container {
+        padding: 14px;
+    }
+
+    .header h1 {
+        font-size: 19px;
+    }
+
+    .stat-card {
+        padding: 15px;
+    }
+}
+
+/* فرم ها و بخش های داخلی */
+
+.app-section {
+    background: #ffffff;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 14px;
+    border: 1px solid #e8edf4;
+}
+
+.app-section h3 {
+    margin-bottom: 20px;
+}
+
+.app-section label {
+    display: block;
+    margin: 15px 0 7px;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.app-section input,
+.app-section select,
+.app-section textarea {
+    width: 100%;
+    padding: 13px;
+    border: 1px solid #dce3ed;
+    border-radius: 9px;
+    background: #ffffff;
+    font-family: inherit;
+    font-size: 14px;
+}
+
+.app-section input:focus,
+.app-section select:focus,
+.app-section textarea:focus {
+    outline: none;
+    border-color: #2563eb;
+}
+
+.app-section form button,
+.trade-item button {
+    width: 100%;
+    padding: 14px;
+    margin-top: 18px;
+    border: none;
+    border-radius: 9px;
+    background: #2563eb;
+    color: white;
+    font-family: inherit;
+    cursor: pointer;
+}
+
+.trade-item {
+    padding: 16px;
+    margin-top: 15px;
+    border: 1px solid #e8edf4;
+    border-radius: 11px;
+    background: #f8fafc;
+    overflow-wrap: anywhere;
+}
+
+.trade-item h4 {
+    margin-bottom: 12px;
+}
+
+.trade-item p {
+    font-size: 13px;
+    margin-top: 10px;
+    line-height: 1.7;
+}
+
+.profit {
+    color: #16a34a;
+    font-weight: bold;
+}
+
+.loss {
+    color: #dc2626;
+    font-weight: bold;
+}

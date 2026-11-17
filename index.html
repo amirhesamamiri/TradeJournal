@@ -1,0 +1,100 @@
+
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#101827">
+
+    <title>Trade Journal | ژورنال معاملاتی</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="manifest.json">
+</head>
+
+<body>
+
+    <header class="header">
+        <div>
+            <h1>ژورنال معاملاتی</h1>
+            <p>مدیریت و تحلیل معاملات شما</p>
+        </div>
+
+        <div class="profile">TJ</div>
+    </header>
+
+    <main class="container">
+
+        <section class="welcome">
+            <h2>خوش آمدی!</h2>
+            <p>عملکرد معاملاتی خود را بررسی کن.</p>
+        </section>
+
+        <section class="stats">
+
+            <div class="stat-card">
+                <span>تعداد معاملات</span>
+                <h2 id="totalTrades">0</h2>
+            </div>
+
+            <div class="stat-card">
+                <span>معاملات سودده</span>
+                <h2 id="winningTrades">0</h2>
+            </div>
+
+            <div class="stat-card">
+                <span>معاملات زیان‌ده</span>
+                <h2 id="losingTrades">0</h2>
+            </div>
+
+            <div class="stat-card">
+                <span>درصد موفقیت</span>
+                <h2 id="winRate">0%</h2>
+            </div>
+
+        </section>
+
+        <section class="balance-card">
+            <span>مجموع سود و زیان</span>
+            <h2 id="totalProfit">0.00 $</h2>
+            <p>عملکرد کلی معاملات ثبت‌شده</p>
+        </section>
+
+        <section class="actions">
+            <h3>مدیریت ژورنال</h3>
+
+            <button onclick="showPage('add')">
+                + ثبت معامله جدید
+            </button>
+
+            <button onclick="showPage('history')">
+                مشاهده تاریخچه معاملات
+            </button>
+
+            <button onclick="showPage('notes')">
+                یادداشت‌های معاملاتی
+            </button>
+        </section>
+
+        <section id="pageContent"></section>
+
+    </main>
+
+    <nav class="bottom-nav">
+        <button onclick="showPage('home')">خانه</button>
+        <button onclick="showPage('add')">ثبت معامله</button>
+        <button onclick="showPage('history')">تاریخچه</button>
+        <button onclick="showPage('notes')">یادداشت‌ها</button>
+    </nav>
+
+    <script src="app.js"></script>
+<script>
+if ("serviceWorker" in navigator) {
+    window.addEventListener("load", () => {
+        navigator.serviceWorker.register("./sw.js")
+            .catch(error => console.error(error));
+    });
+}
+</script>
+</body>
+</html>
